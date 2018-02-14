@@ -3,6 +3,6 @@
 
 <?php
 
-header("Refresh:2; url=./Views/Home/Layout.php");
+header("Refresh:2; url=login");
 
 ?>

@@ -37,15 +37,15 @@ if($_SESSION['group_id']!=1 && $_SESSION['group_id']!=2  ) header("Location:../.
     <nav id="page-leftbar" role="navigation">
 
         <ul class="acc-menu" id="sidebar">
-            <li><a href="#"><i class="fa fa-home"></i><span>Ana Sayfa</span></a></li>
+            <li><a href="admin-panel"><i class="fa fa-home"></i><span>Ana Sayfa</span></a></li>
             <li class="divider"></li>
-            <li><a href="../Admin/AdminLayout.php?page=Detail"><i class="fa fa-users"></i><span>Müşteriler</span></a></li>
+            <li><a href="admin-detail"><i class="fa fa-users"></i><span>Müşteriler</span></a></li>
 
             <?php if($_SESSION['group_id']==1){ ?>
-            <li><a href="../Admin/AdminLayout.php?page=Add"><i class="fa fa-plus"></i><span>Yeni Ekle</span></a></li>
+            <li><a href="admin-add"><i class="fa fa-plus"></i><span>Yeni Ekle</span></a></li>
             <?php } ?>
 
-            <li><a href="Exit.php"><i class="fa fa-sign-out"></i><span>Çıkış</span></a></li>
+            <li><a href="Views/Admin/exit.php"><i class="fa fa-sign-out"></i><span>Çıkış</span></a></li>
         </ul>
 
     </nav>
@@ -55,7 +55,7 @@ if($_SESSION['group_id']!=1 && $_SESSION['group_id']!=2  ) header("Location:../.
             <div class="container">
 
               <?php
-              if(isset($_GET['page'])){
+              if(isset($_GET['page']) && $_GET['page']!= 'panel'){
                   include($_GET['page'].'.php');
               }
               ?>

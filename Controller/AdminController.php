@@ -27,7 +27,7 @@ switch ($_GET['action'])
 }
 
 $DB->Close();
-header('Location: ../Views/Admin/AdminLayout.php?page=Detail');
+header('Location: ../admin-detail');
 
 function addAction(&$conDB)
 {

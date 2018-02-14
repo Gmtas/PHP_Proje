@@ -1,10 +1,10 @@
 <?php
 
-if($_SESSION['group_id']!=1) header("Location:Exit.php");
+if($_SESSION['group_id']!=1) header("Location:exit.php");
 
 ?>
 
-<form action="../../Controller/AdminController.php?action=delete" id="AddForm" method="post">
+<form action="../../../Controller/AdminController.php?action=delete" id="AddForm" method="post">
     <div class="panel panel-gray">
         <div class="panel-heading">
             <div class="col-md-12">
@@ -28,7 +28,7 @@ if($_SESSION['group_id']!=1) header("Location:Exit.php");
                 <div class="col-sm-9 col-sm-offset-3">
                     <div class="btn-toolbar pull-right">
                         <input type="submit" value="Onay" class="btn btn-success" />
-                        <input type="" value="Vazgeç" class="btn btn-success" onclick="window.location.href='AdminLayout.php?page=Detail'" />
+                        <input type="" value="Vazgeç" class="btn btn-success" onclick="window.location.href='admin-detail'" />
                     </div>
                 </div>
             </div>

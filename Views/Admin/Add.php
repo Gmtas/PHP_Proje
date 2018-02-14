@@ -1,6 +1,6 @@
 <?php
 
-if($_SESSION['group_id']!=1) header("Location:Exit.php");
+if($_SESSION['group_id']!=1) header("Location:exit.php");
 
 ?>
 
@@ -139,3 +139,4 @@ if($_SESSION['group_id']!=1) header("Location:Exit.php");
     });
 
 </script>
+

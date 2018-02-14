@@ -1,0 +1,13 @@
+Options +FollowSymLinks
+
+RewriteEngine on
+
+RewriteRule	^admin-([^/]*)-(.*)$ Views/Admin/AdminLayout.php?page=$1&_id=$2 [L]
+
+RewriteRule	^admin-(.*)$ Views/Admin/AdminLayout.php?page=$1 [L]
+
+RewriteRule ^admin-panel$ Views/Admin/AdminLayout.php [L]
+
+RewriteRule ^login-(.*)$ Views/Home/Layout.php?fdb=$1 [L]
+
+RewriteRule ^login$ Views/Home/Layout.php [L]

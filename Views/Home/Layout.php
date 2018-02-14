@@ -20,7 +20,7 @@
 
 <body class="focusedform">
 
-    <?php include('Login.php');?>
+    <?php include('login.php');?>
 
 </body>
 

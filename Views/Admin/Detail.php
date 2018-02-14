@@ -23,7 +23,7 @@ $query->execute();
             <h4>Müşteri Detayları</h4>
 
             <?php if($_SESSION['group_id']==1){ ?>
-            <a href="../Admin/AdminLayout.php?page=Add"  class="btn btn-success btn-sm tooltips pull-right" ><i class="fa fa-plus">&nbsp;&nbsp; Yeni Müşteri Ekle</i></a>
+            <a href="admin-add"  class="btn btn-success btn-sm tooltips pull-right" ><i class="fa fa-plus">&nbsp;&nbsp; Yeni Müşteri Ekle</i></a>
             <?php } ?>
 
         </div>
@@ -60,8 +60,8 @@ $query->execute();
                                 <td><?php echo $value['adres']   ?></td>
 
                                 <?php if($_SESSION['group_id']==1){ ?>
-                                <td><a href='../Admin/AdminLayout.php?page=Edit&_id=<?php echo $value['id']?>' class='btn btn-xs btn-info tooltips' title='Düzenle'>Düzenle</a></td>
-                                <td><a href='../Admin/AdminLayout.php?page=Delete&_id=<?php echo $value['id']?>' class="btn btn-xs btn-danger tooltips"  title="Sil"> Sil</a></td>
+                                <td><a href='admin-edit-<?php echo $value['id']?>' class='btn btn-xs btn-info tooltips' title='Düzenle'>Düzenle</a></td>
+                                <td><a href='admin-delete-<?php echo $value['id']?>' class="btn btn-xs btn-danger tooltips"  title="Sil"> Sil</a></td>
                                 <?php }?>
 
                             </tr>

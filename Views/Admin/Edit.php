@@ -1,6 +1,6 @@
 <?php
 
-if($_SESSION['group_id']!=1) header("Location:Exit.php");
+if($_SESSION['group_id']!=1) header("Location:exit.php");
 
 require_once ('../../Model/Database.php');
 
@@ -21,7 +21,6 @@ $query->execute(array($_GET['_id']));
 $result=$query->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
-
 
 <form action="../../Controller/AdminController.php?action=edit" id="editForm" method="post">
     <div class="panel panel-gray">

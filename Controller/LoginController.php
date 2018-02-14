@@ -29,10 +29,10 @@ if ($d=$query->fetchAll(PDO::FETCH_ASSOC)){
 
     $DB->Close();
 
-    header("Location:../Views/Admin/AdminLayout.php");
+    header("Location:../admin-panel");
 }
 else{
-    header("Location:../Views/Home/Layout.php?fdb=1");
+    header("Location:../login-1");
 }
 
 
